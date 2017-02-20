@@ -2,17 +2,29 @@
 * @Author: yqy
 * @Date:   2016-12-05 18:33:36
 * @Last Modified by:   yuqy
-* @Last Modified time: 2016-12-09 13:20:47
+* @Last Modified time: 2017-01-13 15:17:29
 */
 
 'use strict';
 import './index.scss';
-var jquery = require('jquery');
-var index = {
-  init (){
-    jquery('body').css('background','red');
+import Form from './form.js';
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+class Layout extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
+  render(){
+    return (
+      <div>
+        <Form/>
+      </div>
+      )
   }
 }
-module.exports= index;
-index.init();
+
+ReactDOM.render(<Layout/>, document.getElementById('test-form'))
+
 
